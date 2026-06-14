@@ -1,0 +1,203 @@
+/*
+=================================================
+Futu-Frenchie Snack Shack Theme
+
+Background:
+Black
+
+Neon Blue:
+#00e5ff
+
+Neon Purple:
+#c44dff
+
+Neon Yellow:
+#fff44f
+
+Neon Orange Paragraphs:
+#ff9f1c
+
+Font Awesome:
+Used for food-related icons throughout website.
+=================================================
+*/
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background-color:#000;
+    color:white;
+}
+
+/* Restaurant Name */
+h1{
+    font-family:'Playfair Display', serif;
+    color:#00e5ff;
+    text-align:center;
+    text-shadow:0 0 15px #00e5ff;
+    font-size:4rem;
+}
+
+/* Rotate heading colors */
+h2{
+    text-align:center;
+    text-transform:uppercase;
+    letter-spacing:10px;
+}
+
+.card:nth-of-type(2) h2{
+    color:#fff44f;
+    text-shadow:0 0 10px #fff44f;
+}
+
+.card:nth-of-type(3) h2{
+    color:#c44dff;
+    text-shadow:0 0 10px #c44dff;
+}
+
+.card:nth-of-type(4) h2{
+    color:#00e5ff;
+    text-shadow:0 0 10px #00e5ff;
+}
+
+
+
+/* Paragraphs */
+p{
+    color:#ff9f1c;
+    line-height:2.0;
+    text-align:center;
+}
+
+
+/* Navigation */
+.navbar{
+    background:#050505;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
+    border-bottom:2px solid #00e5ff;
+}
+
+.logo{
+    width:120px;
+}
+
+.navbar ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+    margin:0;
+    padding:0;
+}
+
+.navbar a{
+    text-decoration:none;
+    font-weight:bold;
+    font-size:1.1rem;
+    transition:.3s;
+}
+
+.navbar li:nth-child(1) a{
+    color:#00e5ff;
+}
+
+.navbar li:nth-child(2) a{
+    color:#fff44f;
+}
+
+.navbar li:nth-child(3) a{
+    color:#c44dff;
+}
+
+.navbar a:hover{
+    text-shadow:0 0 12px currentColor;
+}
+
+/* Reusable Card */
+.card{
+    width:85%;
+    max-width:1000px;
+    margin:30px auto;
+    padding:25px;
+
+    background:#111;
+
+    border:1px solid #333;
+    border-radius:12px;
+
+    box-shadow:
+    0 0 15px rgba(0,229,255,.4);
+}
+
+/* Hero */
+.hero{
+    text-align:center;
+}
+
+.tagline{
+    color:#fff44f;
+    font-size:1.3rem;
+    font-weight:bold;
+    text-shadow:0 0 10px #fff44f;
+}
+
+/* Images */
+img{
+    display:block;
+    max-width:100%;
+    height:auto;
+    margin:20px auto;
+    border-radius:10px;
+
+    box-shadow:
+    0 0 20px #c44dff;
+}
+
+/* Existing Menu Table*/
+table{
+    width:100%;
+    border-collapse:separate;
+    border-spacing:0 12px;
+}
+
+th{
+    padding:18px;
+}
+
+td{
+    padding:20px 25px;
+    line-height:1.6;
+}
+
+tbody tr{
+    transition:.3s;
+}
+
+tbody tr:hover{
+    background:#1a1a1a;
+    box-shadow:0 0 15px #00e5ff;
+}
+
+/* Optional glow animation */
+@keyframes glowPulse{
+    0%{
+        text-shadow:0 0 8px currentColor;
+    }
+
+    50%{
+        text-shadow:
+        0 0 20px currentColor,
+        0 0 30px currentColor;
+    }
+
+    100%{
+        text-shadow:0 0 8px currentColor;
+    }
+}
+
+h1,
+h2{
+    animation:glowPulse 3s infinite;
+}

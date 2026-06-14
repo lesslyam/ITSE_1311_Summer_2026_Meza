@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Futu-Frenchie Snack Shack - Reservations</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <img src="images/logo.png" alt="Futu-Frenchie Snack Shack Logo" class="logo">
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="reservations.html">Reservations</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+<section class="card">
+
+    <h1>Reservations</h1>
+
+    <p>
+        Reservations are request only and are subject to availability.
+        Our team will contact you to confirm your reservation.
+    </p>
+
+    <form action="#" method="post">
+
+        <label for="name">Name</label>
+        <input type="text"
+               id="name"
+               name="name"
+               required
+               maxlength="20">
+
+        <label for="email">Email</label>
+        <input type="email"
+               id="email"
+               name="email"
+               required>
+
+        <label for="party">Party Size</label>
+        <select id="party" name="party" required>
+            <option value="">Choose Size</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+        </select>
+
+        <label for="date">Date</label>
+        <input type="date"
+               id="date"
+               name="date"
+               required>
+
+        <label for="time">Time</label>
+        <input type="time"
+               id="time"
+               name="time"
+               required>
+
+        <fieldset>
+            <legend>Seating Preference</legend>
+
+            <input type="radio"
+                   id="indoor"
+                   name="seating"
+                   value="Indoor"
+                   required>
+
+            <label for="indoor">Indoor</label>
+
+            <input type="radio"
+                   id="outdoor"
+                   name="seating"
+                   value="Outdoor">
+
+            <label for="outdoor">Outdoor</label>
+
+            <input type="radio"
+                   id="window"
+                   name="seating"
+                   value="Window">
+
+            <label for="window">Window</label>
+        </fieldset>
+
+        <label for="notes">Dietary Notes</label>
+
+        <textarea id="notes"
+                  name="notes"
+                  maxlength="30"></textarea>
+
+        <label class="checkbox">
+            <input type="checkbox" name="newsletter">
+            Join Newsletter
+        </label>
+
+        <div class="button-group">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+
+    </form>
+
+</section>
+
+</main>
+
+</body>
+</html>
