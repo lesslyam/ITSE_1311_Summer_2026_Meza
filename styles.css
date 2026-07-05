@@ -22,11 +22,21 @@ Used for food-related icons throughout website.
 =================================================
 */
 
+
 body{
     margin:0;
-    font-family:Arial, sans-serif;
+    font-family:Arial,sans-serif;
     background-color:#000;
     color:white;
+
+    background-image:
+        radial-gradient(circle at top left,
+        rgba(0,229,255,.15),
+        transparent 30%),
+
+        radial-gradient(circle at bottom right,
+        rgba(196,77,255,.15),
+        transparent 30%);
 }
 
 /* Restaurant Name */
@@ -116,7 +126,7 @@ p{
 }
 
 /* Reusable Card */
-.card{
+.frenchie-card{
     width:85%;
     max-width:1000px;
     margin:30px auto;
@@ -162,6 +172,15 @@ table{
     border-spacing:0 12px;
 }
 
+.table-dark{
+    --bs-table-bg:#111;
+    --bs-table-striped-bg:#1a1a1a;
+}
+
+.table{
+    box-shadow:0 0 15px rgba(0,229,255,.4);
+}
+
 th{
     padding:18px;
 }
@@ -201,3 +220,25 @@ h1,
 h2{
     animation:glowPulse 3s infinite;
 }
+
+.form-control,
+.form-select{
+    background:#111;
+    color:white;
+    border:1px solid #00e5ff;
+}
+
+.form-control:focus,
+.form-select:focus{
+    background:#111;
+    color:white;
+    border-color:#c44dff;
+    box-shadow:0 0 10px #c44dff;
+}
+
+.form-label,
+legend,
+label{
+    color:#00e5ff;
+}
+

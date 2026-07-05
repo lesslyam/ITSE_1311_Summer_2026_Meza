@@ -10,25 +10,59 @@
 
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet">
+	  
+	<link rel="stylesheet" href="styles.css">  
 </head>
 <body>
 
 <header>
-    <nav class="navbar">
-        <img src="images/logo.png" alt="Futu-Frenchie Snack Shack Logo" class="logo">
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
 
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="menu.html">Menu</a></li>
-            <li><a href="reservations.html">Reservations</a></li>
-        </ul>
-    </nav>
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="images/logo.png" alt="Restaurant Logo" width="50" class="me-2">
+            Futu-Frenchie Snack Shack
+        </a>
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="menu.html">Menu</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="reservations.html">Reservations</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+	</nav>
 </header>
 
-<main>
 
-    <section class="card">
-        <h1>Our Menu</h1>
+
+    <main class="frenchie-card">
+
+    <h1 class="text-center mb-4">Our Menu</h1>
+
+    <div id="menuContainer"></div>
+
+	
 
         <p>
             Our menu features handcrafted meals made with fresh ingredients,
@@ -39,66 +73,13 @@
         <img src="images/img3.jpg"
              alt="Restaurant menu food selection">
 
-        <table>
-            <caption>Popular Menu Combos</caption>
-
-            <thead>
-                <tr>
-                    <th>Combo</th>
-                    <th>Includes</th>
-                    <th>Price</th>
-                    <th>Notes</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <tr>
-                    <td>Classic Burger</td>
-                    <td>Burger, Fries, Drink</td>
-                    <td>$12.99</td>
-                    <td>Popular</td>
-                </tr>
-
-                <tr>
-                    <td>Garden Delight</td>
-                    <td>Salad, Soup, Tea</td>
-                    <td>$10.99</td>
-                    <td>Vegan</td>
-                </tr>
-
-                <tr>
-                    <td>Spicy Fiesta</td>
-                    <td>Tacos, Rice, Drink</td>
-                    <td>$13.99</td>
-                    <td>Spicy</td>
-                </tr>
-
-                <tr>
-                    <td>Pasta Special</td>
-                    <td>Pasta, Breadsticks</td>
-                    <td>$14.99</td>
-                    <td>Popular</td>
-                </tr>
-
-                <tr>
-                    <td>Seafood Combo</td>
-                    <td>Shrimp, Rice, Drink</td>
-                    <td>$16.99</td>
-                    <td>Chef Favorite</td>
-                </tr>
-
-                <tr>
-                    <td>Breakfast Plate</td>
-                    <td>Eggs, Toast, Coffee</td>
-                    <td>$9.99</td>
-                    <td>Popular</td>
-                </tr>
-            </tbody>
-
-        </table>
+        <div id="menuContainer"></div>
     </section>
 
 </main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
 
 </body>
 </html>
