@@ -47,6 +47,10 @@
                 <li class="nav-item">
                     <a class="nav-link" href="reservations.html">Reservations</a>
                 </li>
+				
+				<li class="nav-item">
+					<a class="nav-link" href="cart.html">Cart</a>
+				</li>
             </ul>
         </div>
 
@@ -60,25 +64,54 @@
 
     <h1 class="text-center mb-4">Our Menu</h1>
 
-    <div id="menuContainer"></div>
+    <div class="mb-4">
+        <label for="categoryFilter" class="form-label">
+            Filter by Category
+        </label>
 
+        <select id="categoryFilter" class="form-select">
+            <option value="All">All</option>
+            <option value="Breakfast">Breakfast</option>
+            <option value="Lunch">Lunch</option>
+            <option value="Dinner">Dinner</option>
+        </select>
+    </div>
 	
+	<div class="mb-4">
 
-        <p>
-            Our menu features handcrafted meals made with fresh ingredients,
-            seasonal produce, and bold flavors inspired by international
-            cuisine.
-        </p>
+    <label for="categoryFilter"
+           class="form-label">
+        Filter By Category
+    </label>
 
-        <img src="images/img3.jpg"
-             alt="Restaurant menu food selection">
+    <select id="categoryFilter"
+            class="form-select">
 
-        <div id="menuContainer"></div>
-    </section>
+        <option value="All">All</option>
+        <option value="Breakfast">Breakfast</option>
+        <option value="Lunch">Lunch</option>
+        <option value="Dinner">Dinner</option>
 
-</main>
+    </select>
+
+	</div>
+
+    <div class="row" id="menuContainer"></div>
+
+    <p class="mt-4">
+        Our menu features handcrafted meals made with fresh ingredients,
+        seasonal produce, and bold flavors inspired by international cuisine.
+    </p>
+
+    <img src="images/img3.jpg"
+         alt="Restaurant menu food selection"
+         class="img-fluid">
+
+	</main>
+    
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
 <script src="js/script.js"></script>
 
 </body>

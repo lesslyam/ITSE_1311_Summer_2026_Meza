@@ -77,8 +77,9 @@ const money = new Intl.NumberFormat("en-US", {
 });
 
 const menuContainer = document.getElementById("menuContainer");
+const categoryFilter = document.getElementById("categoryFilter");
 
-if (menuContainer) {
+function displayMenu(items) {
 
     let tableHTML = `
     <table class="table table-striped table-dark">
@@ -88,12 +89,14 @@ if (menuContainer) {
                 <th>Description</th>
                 <th>Category</th>
                 <th>Price</th>
+                <th>Quantity</th>
+                <th>Order</th>
             </tr>
         </thead>
         <tbody>
     `;
 
-    MENU_ITEMS.forEach(item => {
+    items.forEach(item => {
 
         tableHTML += `
         <tr>
@@ -101,6 +104,27 @@ if (menuContainer) {
             <td>${item.description}</td>
             <td>${item.category}</td>
             <td>${money.format(item.price)}</td>
+
+            <td>
+                <select id="qty-${item.id}"
+                        class="form-select form-select-sm">
+
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+
+                </select>
+            </td>
+
+            <td>
+                <button
+                    class="btn btn-success btn-sm addToCart"
+                    data-id="${item.id}">
+                    Add To Cart
+                </button>
+            </td>
         </tr>
         `;
     });
@@ -111,8 +135,88 @@ if (menuContainer) {
     `;
 
     menuContainer.innerHTML = tableHTML;
+
+    attachCartEvents();
 }
 
+function attachCartEvents() {
+
+    const buttons =
+        document.querySelectorAll(".addToCart");
+
+    buttons.forEach(button => {
+
+        button.addEventListener("click", function() {
+
+            const itemId =
+                Number(this.dataset.id);
+
+            const item =
+                MENU_ITEMS.find(
+                    menuItem => menuItem.id === itemId
+                );
+
+            const quantity =
+                Number(
+                    document.getElementById(
+                        `qty-${itemId}`
+                    ).value
+                );
+
+            const cart =
+                JSON.parse(
+                    localStorage.getItem("cart")
+                ) || [];
+
+            cart.push({
+                id: item.id,
+                name: item.name,
+                price: item.price,
+                quantity: quantity
+            });
+
+            localStorage.setItem(
+                "cart",
+                JSON.stringify(cart)
+            );
+
+            alert(
+                `${quantity} ${item.name} added to cart.`
+            );
+        });
+    });
+}
+
+if (menuContainer) {
+
+    displayMenu(MENU_ITEMS);
+
+    if (categoryFilter) {
+
+        categoryFilter.addEventListener(
+            "change",
+            function() {
+
+                const selected =
+                    this.value;
+
+                if (selected === "All") {
+
+                    displayMenu(MENU_ITEMS);
+
+                } else {
+
+                    const filtered =
+                        MENU_ITEMS.filter(item =>
+                            item.category === selected
+                        );
+
+                    displayMenu(filtered);
+                }
+            }
+        );
+    }
+}
 
 const reservationForm =
     document.getElementById("reservationForm");
