@@ -1,0 +1,472 @@
+/*
+=================================================
+Futu-Frenchie Snack Shack React Theme
+=================================================
+Neon Blue: #00e5ff
+Neon Purple: #c44dff
+Neon Yellow: #fff44f
+Neon Orange: #ff9f1c
+Background: #000
+=================================================
+*/
+
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    margin: 0;
+    min-height: 100%;
+    background-color: #000;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+
+    background-image:
+        radial-gradient(
+            circle at top left,
+            rgba(0, 229, 255, 0.15),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            rgba(196, 77, 255, 0.15),
+            transparent 30%
+        );
+}
+
+#root {
+    width: 100%;
+}
+
+main {
+    width: 100%;
+}
+
+/* =========================
+   HEADINGS AND TEXT
+========================= */
+
+h1 {
+    margin-top: 0;
+    font-family: "Playfair Display", serif;
+    color: #00e5ff;
+    text-align: center;
+    text-shadow: 0 0 15px #00e5ff;
+    font-size: 4rem;
+}
+
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+
+p {
+    color: #ff9f1c;
+    line-height: 2;
+    text-align: center;
+}
+
+h1,
+h2 {
+    animation: glowPulse 3s infinite;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar {
+    width: 100%;
+    min-height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+    padding: 15px 40px;
+
+    background-color: #050505;
+    border-bottom: 2px solid #00e5ff;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    color: white;
+    text-decoration: none;
+    font-size: 1.15rem;
+    font-weight: bold;
+}
+
+.navbar .logo {
+    display: block;
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.navbar li {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navbar li:nth-child(1) a {
+    color: #00e5ff;
+}
+
+.navbar li:nth-child(2) a {
+    color: #fff44f;
+}
+
+.navbar li:nth-child(3) a {
+    color: #c44dff;
+}
+
+.navbar a:hover {
+    text-shadow: 0 0 12px currentColor;
+}
+
+/* =========================
+   REUSABLE CARD
+========================= */
+
+.frenchie-card {
+    width: 85%;
+    max-width: 1000px;
+
+    margin: 30px auto;
+    padding: 25px;
+
+    background-color: #111;
+    border: 1px solid #333;
+    border-radius: 12px;
+
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.4);
+}
+
+/* =========================
+   HOME PAGE
+========================= */
+
+.hero {
+    text-align: center;
+}
+
+.hero p {
+    color: #fff44f;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px #fff44f;
+}
+
+.frenchie-card:nth-of-type(2) h2 {
+    color: #fff44f;
+    text-shadow: 0 0 10px #fff44f;
+}
+
+.frenchie-card:nth-of-type(3) h2 {
+    color: #c44dff;
+    text-shadow: 0 0 10px #c44dff;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+
+    margin: 20px auto;
+
+    border-radius: 10px;
+    box-shadow: 0 0 20px #c44dff;
+}
+
+.utensil-icons {
+    margin-top: 20px;
+    text-align: center;
+    line-height: 2;
+}
+
+.utensil-icon {
+    display: inline-block;
+    margin: 3px;
+    font-size: 1.35rem;
+}
+
+/* =========================
+   MENU PAGE
+========================= */
+
+.menu-page h1 {
+    margin-bottom: 30px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(240px, 1fr)
+    );
+    gap: 24px;
+
+    margin: 30px 0;
+}
+
+.menu-card {
+    padding: 22px;
+
+    background-color: #111;
+    border: 1px solid #00e5ff;
+    border-radius: 12px;
+
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.4);
+    text-align: left;
+}
+
+.menu-card h2 {
+    margin-top: 0;
+
+    color: #fff44f;
+    text-align: left;
+    text-transform: none;
+    letter-spacing: 2px;
+}
+
+.menu-category {
+    color: #00e5ff;
+    font-weight: bold;
+    text-align: left;
+}
+
+.menu-description {
+    color: #ff9f1c;
+    text-align: left;
+}
+
+.menu-price {
+    margin-bottom: 0;
+
+    color: white;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+.menu-page-image {
+    width: min(100%, 700px);
+    margin: 25px auto 0;
+}
+
+/* =========================
+   RESERVATIONS PAGE
+========================= */
+
+.reservations-page h1 {
+    margin-bottom: 30px;
+}
+
+.reservation-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    max-width: 650px;
+    margin: 0 auto;
+
+    text-align: left;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label,
+.seating-fieldset legend,
+.checkbox-option {
+    color: #00e5ff;
+    font-weight: bold;
+}
+
+.reservation-form input,
+.reservation-form select {
+    width: 100%;
+    padding: 12px;
+
+    background-color: #111;
+    color: white;
+
+    border: 1px solid #00e5ff;
+    border-radius: 6px;
+
+    font: inherit;
+}
+
+.reservation-form input:focus,
+.reservation-form select:focus {
+    outline: none;
+    border-color: #c44dff;
+    box-shadow: 0 0 10px #c44dff;
+}
+
+.seating-fieldset {
+    padding: 16px;
+
+    border: 1px solid #00e5ff;
+    border-radius: 8px;
+}
+
+.radio-options {
+    display: flex;
+    gap: 30px;
+
+    margin-top: 10px;
+}
+
+.radio-options label,
+.checkbox-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.radio-options input,
+.checkbox-option input {
+    width: auto;
+}
+
+.form-group small {
+    color: #fff44f;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.form-buttons button {
+    padding: 12px 24px;
+
+    background-color: #111;
+    color: white;
+
+    border: 1px solid #00e5ff;
+    border-radius: 6px;
+
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.form-buttons button:hover {
+    border-color: #c44dff;
+    box-shadow: 0 0 10px #c44dff;
+}
+
+.success-message {
+    margin-bottom: 24px;
+    padding: 14px;
+
+    color: #fff44f;
+    background-color: #111;
+
+    border: 1px solid #fff44f;
+    border-radius: 8px;
+
+    font-weight: bold;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes glowPulse {
+    0% {
+        text-shadow: 0 0 8px currentColor;
+    }
+
+    50% {
+        text-shadow:
+            0 0 20px currentColor,
+            0 0 30px currentColor;
+    }
+
+    100% {
+        text-shadow: 0 0 8px currentColor;
+    }
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 700px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        letter-spacing: 5px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+
+        padding: 20px;
+    }
+
+    .brand {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .frenchie-card {
+        width: 92%;
+        padding: 20px;
+    }
+
+    .radio-options,
+    .form-buttons {
+        flex-direction: column;
+    }
+}
